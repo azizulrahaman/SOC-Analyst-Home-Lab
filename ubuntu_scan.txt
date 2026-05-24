@@ -1,0 +1,18 @@
+# Nmap 7.95 scan initiated Sat May 23 23:09:54 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -O -oN /home/azizul_rahaman/Desktop/ubuntu_scan.txt 192.168.56.106
+Nmap scan report for 192.168.56.106
+Host is up (0.00026s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 84:d7:d5:44:6c:b4:42:f0:8c:01:76:1a:29:b1:99:2b (ECDSA)
+|_  256 b8:e8:fb:84:10:34:b8:5a:e8:d5:ac:c2:61:ff:a7:df (ED25519)
+MAC Address: 08:00:27:19:66:78 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 4.15 - 5.19 (97%), Linux 3.10 - 4.11 (91%), Linux 3.2 - 4.14 (91%), Android 10 - 12 (Linux 4.14 - 4.19) (91%), Linux 2.6.32 - 3.10 (90%), Linux 5.0 - 5.14 (90%), OpenWrt 21.02 (Linux 5.4) (90%), Android 12 (Linux 5.4) (89%), Linux 2.6.32 (89%), Linux 4.19 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 23 23:10:21 2026 -- 1 IP address (1 host up) scanned in 27.22 seconds
