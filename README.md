@@ -59,3 +59,36 @@ Perform network reconnaissance and vulnerability scanning across all lab machine
 ### Evidence
 - [Windows Scan Results](windows_scan.txt)
 - [Ubuntu Scan Results](ubuntu_scan.txt)
+
+## Project 3: Network Traffic Analysis with Wireshark
+
+### Objective
+Capture and analyze real network traffic to identify normal behavior 
+and detect port scanning activity.
+
+### What I Did
+- Captured live network traffic on eth0 interface
+- Filtered ICMP traffic to analyze ping requests and replies
+- Ran an Nmap port scan and captured it in Wireshark
+- Identified what a port scan looks like in packet captures
+
+### Key Findings
+
+| Traffic Type | What I Saw | SOC Significance |
+|---|---|---|
+| ICMP | Ping requests/replies between Kali and Windows | Normal traffic |
+| ARP | Machines discovering each other | Normal traffic |
+| TCP SYN flood | Thousands of SYN packets to different ports | Port scan detected |
+
+### What a Port Scan Looks Like
+One machine sending SYN packets to thousands of ports in seconds is a 
+red flag in any SOC environment. This would trigger an IDS/IPS alert 
+in a real network.
+
+### Tools Used
+- Wireshark 4.4.7
+- Kali Linux
+- Nmap 7.95
+
+### Evidence
+- [Packet Capture File](lab_capture.pcapng)
