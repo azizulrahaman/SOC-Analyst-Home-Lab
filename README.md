@@ -35,5 +35,27 @@ All three machines successfully ping each other with 0% packet loss.
 - Linux networking commands (ip a, ip route, ping)
 - Documenting a technical lab environment
 
-## Next Project
-Project 2: SIEM Setup and Log Analysis using Secur
+
+## Project 2: Network Vulnerability Scanning with Nmap
+
+### Objective
+Perform network reconnaissance and vulnerability scanning across all lab machines.
+
+### Scans Performed
+
+| Target | IP | Open Ports | Key Findings |
+|---|---|---|---|
+| Windows 10 | 192.168.56.109 | 135, 139, 445 | SMB signing not required |
+| Ubuntu Server | 192.168.56.106 | 22 | OpenSSH 9.6p1 |
+
+### Security Findings
+- **Port 445 (SMB)** on Windows 10 has signing not required — vulnerable to relay attacks
+- **Port 22 (SSH)** on Ubuntu running modern OpenSSH 9.6p1 — low risk
+
+### Tools Used
+- Nmap 7.95
+- Kali Linux
+
+### Evidence
+- [Windows Scan Results](windows_scan.txt)
+- [Ubuntu Scan Results](ubuntu_scan.txt)
