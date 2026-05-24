@@ -26,7 +26,7 @@ a real SOC environment for threat detection and security monitoring practice.
 ## Proof of Connectivity
 All three machines successfully ping each other with 0% packet loss.
 
-![Lab Screenshot](screenshots/lab_running.png)
+![Lab Screenshot](lab_running.png)
 
 ## What I Learned
 - Configuring virtual networks in VirtualBox
