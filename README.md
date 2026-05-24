@@ -92,3 +92,42 @@ in a real network.
 
 ### Evidence
 - [Packet Capture File](lab_capture.pcapng)
+
+## Project 4: Log Analysis with Splunk SIEM
+
+### Objective
+Configure Splunk Enterprise as a SIEM to collect and analyze Windows 
+Security logs for threat detection.
+
+### Setup
+- Splunk Enterprise 9.2.1 on Ubuntu Server
+- Splunk Universal Forwarder on Windows 10
+- Collecting Windows Security Event Logs
+
+### SPL Queries Used
+
+| Query | Purpose |
+|---|---|
+| `index=* host=DESKTOP-O82AOM3` | View all Windows events |
+| `EventCode=4624` | Successful logins |
+| `EventCode=4625` | Failed logins |
+| `stats count by Account_Name` | Login activity by user |
+
+### Findings
+
+| EventCode | Description | Count | Verdict |
+|---|---|---|---|
+| 4624 | Successful Logon | 1,005 | Normal |
+| 4625 | Failed Logon | 4 | False Positive |
+| 4672 | Special Privileges | 935 | Normal |
+
+### Incident Analysis
+4 failed logins detected on 5/17/26 from 127.0.0.1 (localhost).
+Accounts involved: Azizul_Rahaman, DESKTOP-O82AOM3$.
+Verdict: False Positive — local machine activity, no external threat.
+
+### Tools Used
+- Splunk Enterprise 9.2.1
+- Splunk Universal Forwarder
+- Windows Event Logs
+- SPL (Splunk Processing Language)
